@@ -1,5 +1,6 @@
 首先在github网页中创建repo
 随便起名，例如learnskill，其他默认
+把本地库传到远程库：
 在本地命令窗口git bash里输入
      git remote origin git@github.com:TgShine/learnskill.git
  origin 可以改成其他名字
@@ -9,3 +10,10 @@
 	git push origin master
 可以同步命令到网页中，记住先
 	git add~， git commit在用git push
+	
+	
+远程库同步到本地库：
+随便起名，例如gitskill， 勾选Initialize this repository with a README
+创建好远程库，在本地
+	$ git clone git@github.com:TgShine/gitskills.git
+克隆一个库，会在操作窗口创建一个文件夹，包含隐藏文件.git
