@@ -1,0 +1,11 @@
+首先在github网页中创建repo
+随便起名，例如learnskill，其他默认
+在本地命令窗口git bash里输入
+     git remote origin git@github.com:TgShine/learnskill.git
+ origin 可以改成其他名字
+首次上传
+	git push -u origin.master
+即是把分支的master仓库传送到网页的仓库，以后上传可简化命令：
+	git push origin master
+可以同步命令到网页中，记住先
+	git add~， git commit在用git push
