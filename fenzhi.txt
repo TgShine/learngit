@@ -1,0 +1,38 @@
+$ git checkout -b dev   创建dev分支
+git checkout命令加上-b参数表示创建并切换，相当于以下两条命令：
+	$ git branch dev
+	$ git checkout dev
+用 git branch 查看当前分支，当千分之前有*号
+之后的操作保存在当前分支，而不是默认分支master
+	$ git checkout master
+切换回主分支之前在dev分支的操作就不显示
+	$ git merge dev合并分支，相当于把master分支指针指向dev
+	$ git branch -d dev  删除dev分支
+	
+
+使用分支和原分支操作一致，但更安全	
+查看分支：git branch
+
+创建分支：git branch <name>
+
+切换分支：git checkout <name>
+
+创建+切换分支：git checkout -b <name>
+
+合并某分支到当前分支：git merge <name>
+
+删除分支：git branch -d <name>
+
+
+
+
+分支冲突时需手动解决冲突才能合并
+用带参数的git log也可以看到分支的合并情况：
+
+$ git log --graph --pretty=oneline --abbrev-commit
+
+
+
+对比合并方式：
+$ git merge dev合并分支，合并后删除dev分支，将会无痕
+$ git merge --no-ff -m "merge with no-ff" dev，合并后会创建新的commit，保留分支的操作
