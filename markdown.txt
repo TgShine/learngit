@@ -1,10 +1,14 @@
-#markdown语法
+---
+title: markdown语法
+date: 2016-11-26 01:00:31
+tags: markdown
+---
 
+之前发表了一片排版超级差的博客，实在不堪回首，作为一个错误，就保留吧，也算自己的一个记忆。单位了以后少犯类似错误，记录markdown常用的语法如下，当然，这是文本对照读取内容的，可以在最后的连接中查看本文的所有预案内容。
 
+## 第一：  标题插入：
 
-##第一：  标题插入：
-
-###1：下方插入任意数量的=或-
+### 1：下方插入任意数量的=或-
 
 
 这是一级标题
@@ -13,16 +17,16 @@
 这是二级标题
 --------------
 
-###2：在行首插入一到六个#，对应于1-6阶标题
-#标题1
-##标题2
-#####标题5
+### 2：在行首插入一到六个#，对应于1-6阶标题
+# 标题1
+## 标题2
+##### 标题5
 
 
 
 
 
-##第二： 区块引用Blockquotes
+## 第二： 区块引用Blockquotes
 用 > 的引用方式
 
 > This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
@@ -63,26 +67,26 @@ id sem consectetuer libero luctus adipiscing.
 
 
 
-##第三：  列表
+## 第三：  列表
 	
 	
 	无序列表：*或者+或者-作为列表标记
 	
-*red
-*blue
-*biack
-+red
-+Green
-+black
--red
--green
--black
+* red
+* blue
+* biack
++ red
++ Green
++ black
+- red
+- green
+- black
 
 	有序列表：数字跟英文句号（行首出现数字-句点-空白）
 	
-1.第一
-2.第二
-3.第三
+1. 第一
+2. 第二
+3. 第三
 
 	列表可以包含多个段落，但每个段落必须缩进一个制表符
 
@@ -121,7 +125,7 @@ sit amet, consectetuer adipiscing elit.
 
 		
 		
-##第四：   代码区块
+## 第四：   代码区块
 
 在markdown中缩进一个制表符就可以创建代码区块（第一个制表符会被忽略）
 
@@ -133,7 +137,7 @@ sit amet, consectetuer adipiscing elit.
 	
 
 	
-##第五：   分割线
+## 第五：   分割线
 	
 三个以上的*，-，_都可以，eg：
 
@@ -149,74 +153,79 @@ sit amet, consectetuer adipiscing elit.
 
 
 
-##第六：   区段元素
+## 第六：   区段元素
 	
 	链接
-	建立一个行内式的链接，只要在方块括号后面紧接着圆括号并插入网址链接即可，如果你还想要加上链接的 title 文字，只要在网址后面，用双引号把 title 文字包起来即可，eg:
+	建立一个行内式的链接，只要在方块括号后面紧接着圆括号并插入网址链接即可，如果你还想要加上链接的 title 文字，
+	只要在网址后面，用双引号把 title 文字包起来即可，eg:
 	
-	访问[百度](http//:www.baidu.com'Title')
+访问 [百度](http://www.baidu.com/)
+访问 [这里](https://y.qq.com/portal/player.html)试试
 	
 	连接到主机,使用相对路径：
 	
-	See my [About](/about/) page for details.
+See my [About](F:\30个数学模型) page for details.
 	
 	参考式连接在链接文字的括号后面再接上另一个方括号，而在第二个方括号里面要填入用以辨识链接的标记：
 	
-	This is [an example] [id] reference-style link.
+This is [an example] [id] reference-style link.
 	
 	接着，在文件的任意处，你可以把这个标记的链接内容定义出来：
 	
-	[id]: http://example.com/  "Optional Title Here"
+[id]: http://example.com/  "Optional Title Here"
 
 	链接内容定义的形式为：
 
-方括号（前面可以选择性地加上至多三个空格来缩进），里面输入链接文字
-接着一个冒号
-接着一个以上的空格或制表符
-接着链接的网址
-选择性地接着 title 内容，可以用单引号、双引号或是括弧包着
+	方括号（前面可以选择性地加上至多三个空格来缩进），里面输入链接文字
+	接着一个冒号
+	接着一个以上的空格或制表符
+	接着链接的网址
+	选择性地接着 title 内容，可以用单引号、双引号或是括弧包着
 
 [foo]: http://example.com/  "Optional Title Here"
 [foo]: http://example.com/  'Optional Title Here'
 [foo]: http://example.com/  (Optional Title Here)
 
-	隐式链接标记功能让你可以省略指定链接标记，这种情形下，链接标记会视为等同于链接文字，要用隐式链接标记只要在链接文字后面加上一个空的方括号，如果你要让 "Google" 链接到 google.com，你可以简化成：
+	隐式链接标记功能让你可以省略指定链接标记，这种情形下，链接标记会视为等同于链接文字，
+	要用隐式链接标记只要在链接文字后面加上一个空的方括号，
+	如果你要让 "baidu" 链接到 www.baidu.com，你可以简化成：
 
-	[Google][]
+[baidu][]
 	
-	[Google]: http://google.com/
+[baidu]: http://www.baidu.com/
 	
-	使用星号（*）和底线（_）作为标记强调字词的符号，被 * 或 _ 包围的字词会被转成用 <em> 标签包围，用两个 * 或 _ 包起来的话，则会被转成 <strong>，例如：
+	使用星号（*）和底线（_）作为标记强调字词的符号，被 * 或 _ 包围的字词会被转成用 <em> 标签包围，
+	用两个 * 或 _ 包起来的话，则会被转成 <strong>，例如：
 	
-	*single asterisks*
+*single asterisks*
 
-	_single underscores_
+_single underscores_
 
-	**double asterisks**
+**double asterisks**
 
-	__double underscores__
+__double underscores__
 	
-	如果你的 * 和 _ 两边都有空白的话，它们就只会被当成普通的符号
+	如果你的 * 和 _ 两边都有空白以外的字符的话，它们就只会被当成普通的符号
 
 
 
 
 	
-##第七： 代码 
+## 第七： 代码 
 
 	行内代码（标记一小段行内代码，你可以用反引号把它包起来（`））
 	
-	Use the `printf()` function.
+Use the `printf()` function.
 	
 	要在代码区段内插入反引号，你可以用多个反引号来开启和结束代码区段：
-	``There is a literal backtick (`) here.``
+``There is a literal backtick (`) here.``
 	
 	代码区段的起始和结束端都可以放入一个空白，起始端后面一个，结束端前面一个，这样你就可以在区段的一开始就插入反引号：
 
-	A single backtick in a code span: `` ` ``(中间的反引号能输出)
-	A backtick-delimited string in a code span: `` `foo` ``
+A single backtick in a code span: `` ` ``(中间的反引号能输出)
+A backtick-delimited string in a code span: `` `foo` ``
 	
-##第八： 图片
+## 第八： 图片
 
 	行内式
 	
@@ -224,68 +233,35 @@ sit amet, consectetuer adipiscing elit.
 	接着一个方括号，里面放上图片的替代文字
 	接着一个普通括号，里面放上图片的网址，最后还可以用引号包住并加上 选择性的 'title' 文字。	
 	
-	![Alt text](/path/to/img.jpg)
-	![Alt text](/path/to/img.jpg "Optional title")
+![比卡丘](https://raw.githubusercontent.com/TgShine/learngit/8a23b01a13ff841b599e985f73449a61368172d5/pikaqiu.png)
 	
 	参考式
-	![Alt text][id]
-	[id]: url/to/image  "Optional title attribute"
+![bika][id]
+[id]: https://raw.githubusercontent.com/TgShine/learngit/8a23b01a13ff841b599e985f73449a61368172d5/pikaqiu.png  "Optional title attribute"
 	
-##第九：   自动链接
+## 第九：   自动链接
 	
 	只要是用方括号包起来， Markdown 就会自动把它转成链接。
-	<http://example.com/>
+<http://www.baidu.com/>
+[http://www.baidu.com/]
 
-##第十：	反斜杠
+## 第十：	反斜杠
 
 利用反斜杠来插入一些在语法中有其它意义的符号
-\   反斜线
-`   反引号
-*   星号
-_   底线
-{}  花括号
-[]  方括号
-()  括弧
-#   井字号
-+   加号
--   减号
-.   英文句点
-!   惊叹号
-感谢
+\\   反斜线
+\`   反引号
+\*   星号
+\_   底线
+\{\}  花括号
+\[\]  方括号
+\(\)  括弧
+\#   井字号
+\+   加号
+\-   减号
+\.   英文句点
+\!   惊叹号
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
-
-
-
-
-
-
-
-
-
+查看原文本可以参考下列链接：
+[文本][]
+[文本]: <https://github.com/TgShine/learngit/blob/master/markdown.txt>
 
